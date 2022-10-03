@@ -1,0 +1,38 @@
+{
+    "name": "@facephi/selphi-widget-web",
+    "version": "5.16.0",
+    "license": "EULA",
+    "author": "Facephi Biometrics, S.A.",
+    "description": "Javascript component for using FacePhi Selphi web widget seamlessly.",
+    "main": "selphi-widget-web.min.js",
+    "types": "types/index.d.ts",
+    "scripts": {
+        "build": "npm run build-min-layer && npm run compress-resources",
+        "test": "npm run build && pushd .. && pushd build && pushd temp && karma start tests/karma.conf.js && popd && popd && popd",
+        "serve": "webpack serve --config webpack.widget.mjs",
+        "build-min-layer": "webpack build --config webpack.widget.mjs",
+        "compress-resources": "pushd .. && pushd build && pushd resources && zip -rq ../FPhi.Resources.Bundle.zip . && popd && pushd package && zip -rq ../FPhi.Js.Component.zip . && popd && popd && popd"
+    },
+    "keywords": [
+        "Selphi",
+        "Facephi",
+        "Biometrics",
+        "Authentication",
+        "Facial",
+        "Recognition"
+    ],
+    "devDependencies": {
+        "chai": "4.3.6",
+        "eslint": "^8.15.0",
+        "karma": "6.3.20",
+        "karma-chai": "0.1.0",
+        "karma-chrome-launcher": "3.1.1",
+        "karma-cli": "2.0.0",
+        "karma-firefox-launcher": "2.1.2",
+        "karma-mocha": "2.0.1",
+        "mocha": "10.0.0",
+        "webpack": "5.72.1",
+        "webpack-cli": "4.9.2",
+        "webpack-dev-server": "4.9.0"
+    }
+}

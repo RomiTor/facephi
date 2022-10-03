@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.3815d181.css","mappings":"AAAA,2BACI,WACJ,CAEA,WACI,yBACJ","sources":["index.css"],"sourcesContent":["html, body, #root, #biometric {\n    height: 100%;\n}\n\n.min-h-100 {\n    min-height: 100% !important;\n}\n\n"],"names":[],"sourceRoot":""}
